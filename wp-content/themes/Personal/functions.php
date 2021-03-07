@@ -2,8 +2,19 @@
     function add_title_tag() {
         add_theme_support( 'title-tag' );
     }
+
     add_action( 'after_setup_theme', 'add_title_tag' );
 
+    function add_menus() {
+        $menuLocations = array(
+            'primary_menu' => "Primay menu",
+            'footer_menu' => "Footer items",
+        );
+
+        register_nav_menus( $menuLocations );
+    }
+
+    add_action( 'init', 'add_menus' );
 
     function theme_register_styles() {
         $version = wp_get_theme()->get('Version');

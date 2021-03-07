@@ -10,3 +10,14 @@
     ?>
 </head>
 <body>
+    <?php
+        wp_nav_menu( 
+            array(
+                'menu' => 'primary',
+                'container' => '',
+                'theme_location' => 'primary_menu',
+                'items_wrap' => '<ul class="my_class">%3$s</ul>'
+            )
+        );
+    ?>
+    <h1><?php the_title(); ?></h1>
