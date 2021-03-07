@@ -20,4 +20,21 @@
             )
         );
     ?>
+    <?php
+        echo get_bloginfo( 'name' );
+        if(function_exists('the_custom_logo')) {
+            $custom_logo_id = get_theme_mod('custom_logo');
+            $logo = wp_get_attachment_image_src( $custom_logo_id );
+        } 
+    ?>
+
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-12 d-flex">
+                <div class="logo_conatiner">
+                    <img class="img-fluid" src="<?php echo $logo[0];  ?>" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
     <h1><?php the_title(); ?></h1>

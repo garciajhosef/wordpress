@@ -7,3 +7,8 @@ Tags: First
 Author: Chris
 Author URI: https://github.com/garciajhosef
 */
+
+.logo_conatiner {
+    width: 70px;
+    height: 70px;
+}
